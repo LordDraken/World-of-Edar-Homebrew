@@ -163,7 +163,13 @@
 			},
 			"duration": [
 				{
-					"type": "instant"
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
 				}
 			],
 			"entries": [
@@ -700,6 +706,81 @@
 					}
 				]
 			}
+		},
+		{
+			"name": "Conflagration",
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "feet",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "flint and some tinder"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You snap your fingers and cause fire to erupt forth in an 10-foot square centered on a point you can see in range. Every creature in the area must make a Dexterity saving throw, taking {@damage 2d6} fire damage on a failed save and half as much on a successful one.",
+				"The fire ignites any flammable objects in the area that aren't being worn or carried."
+			],
+			"entriesHigherLevel": [
+				"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d6} for every spell slot above 1st"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"Q"
+			],
+			"miscTags": [
+				"SCL"
+			]
 		}
 	]
 }
