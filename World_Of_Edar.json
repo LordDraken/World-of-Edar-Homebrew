@@ -54,6 +54,14 @@
 				"fromClassList": [
 					{
 						"name": "Artificer",
+						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer (Revisited)",
+						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
 						"source": "TCE"
 					},
 					{
@@ -128,6 +136,14 @@
 					{
 						"name": "Warlock",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer (Revisited)",
+						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -461,7 +477,7 @@
 				}
 			],
 			"entries": [
-				"You load the bullet used in the spell’s casting into a firearm and make a ranged weapon attack with it against a creature in the weapon’s range. On hit, the target suffers the weapon attack’s normal effects and must make a Constitution saving throw as electricity suddenly shocks their body. On a failed save, the target is {@condition incapacitated} until the end of their next turn."
+				"You load the bullet used in the spell's casting into a firearm and make a ranged weapon attack with it against a creature in the weapon's range. On hit, the target suffers the weapon attack's normal effects and must make a Constitution saving throw as electricity suddenly shocks their body. On a failed save, the target is {@condition incapacitated} until the end of their next turn."
 			],
 			"conditionInflict": [
 				"incapacitated"
@@ -477,6 +493,14 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer (Revisited)",
+						"source": "UAArtificerRevisited"
 					},
 					{
 						"name": "Artificer",
@@ -522,6 +546,14 @@
 			],
 			"classes": {
 				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer (Revisited)",
+						"source": "UAArtificerRevisited"
+					},
 					{
 						"name": "Artificer",
 						"source": "TCE"
@@ -618,7 +650,7 @@
 				{
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the necrotic damage increases by {@dice 1d10} for each spell slot above 2nd."
+						"When you cast this spell using a spell slot of 3rd level or higher, the necrotic damage increases by {@scaledice 2d10|1-9|1d10} for each spell slot above 2nd."
 					]
 				}
 			],
@@ -733,13 +765,7 @@
 			},
 			"duration": [
 				{
-					"type": "timed",
-					"duration": {
-						"type": "minute",
-						"amount": 1,
-						"upTo": true
-					},
-					"concentration": true
+					"type": "instant"
 				}
 			],
 			"entries": [
@@ -747,10 +773,18 @@
 				"The fire ignites any flammable objects in the area that aren't being worn or carried."
 			],
 			"entriesHigherLevel": [
-				"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@dice 1d6} for every spell slot above 1st"
+				"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by @scaledice 2d6|1-9|1d6 for every spell slot above 1st"
 			],
 			"classes": {
 				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer (Revisited)",
+						"source": "UAArtificerRevisited"
+					},
 					{
 						"name": "Artificer",
 						"source": "TCE"
@@ -779,7 +813,173 @@
 				"Q"
 			],
 			"miscTags": [
+				"SCL",
+				"SGT"
+			]
+		},
+		{
+			"name": "Create Cover",
+			"level": 0,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "a shard of glass"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1,
+						"upTo": true
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You strike the ground and conjure a short but long wall of force directly in front of you that can be used as cover against projectiles.  The wall is 15 feet long and up to 1 inch thick.  Creatures can pass freely through the barrier without resistance, however it blocks incoming projectiles.",
+				"The wall provides half-cover to any creature in a square along it's length.  When a creature rolls a ranged attack or ranged spell attack against a creature using the wall as cover, the attack also targets the wall (using the same roll for attack and damage).  If the attack misses the creature taking cover but hits the wall, the wall takes damage as normal.  If the attack hits the creature taking cover, the wall isn't affected.",
+				"The wall has an AC of 15 and HP of {@dice 4d8} + your spellcasting modifier.  When the barrier's hit points drop to 0 or lower, the barrier shatters and the spell ends."
+			],
+			"entriesHigherLevel": [
+				"When you cast this spell using a spell slot of 2nd level or higher, the HP of the barrier increases by {@scaledice 4d8|1-9|2d8} for each level above 1."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer (Revisited)",
+						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
+				]
+			},
+			"source": "DrakrothikensGuidetoEdar",
+			"areaTags": [
+				"L"
+			],
+			"miscTags": [
 				"SCL"
+			]
+		},
+		{
+			"name": "Cyrostasis",
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "a drop of water and a pinch of silver dust"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": "1"
+					}
+				}
+			],
+			"entries": [
+				"You choose one creature within range that you can see.  The area immediatly around the creature suddenly flash-freezes in an attempt to lock them in place.  The creature must make a Constitution saving throw or be restrained for the spell's duration.  A creature restrained by this spell takes {@damage 1d6} cold damage at the start of each of its turns.",
+				"A creature can repeat this saving throw at the end of each of its turns.  On a success, the spell ends."
+			],
+			"entriesHigherLevel": [
+				"If you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 1d6|1-9|1d6} for each slot level above 1st."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "UAArtificer"
+					},
+					{
+						"name": "Artificer (Revisited)",
+						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
+				]
+			},
+			"source": "DrakrothikensGuidetoEdar",
+			"damageInflict": [
+				"cold"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
 			]
 		}
 	]
