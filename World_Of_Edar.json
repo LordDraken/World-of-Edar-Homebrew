@@ -3,11 +3,13 @@
 	"_meta": {
 		"sources": [
 			{
-				"json": "WorldOfEdar",
+				"json": "DrakrothikensGuidetoEdar",
 				"abbreviation": "WoE",
-				"full": "World Of Edar",
-				"url": "",
-				"authors": ["Drakrothiken"],
+				"full": "Drakrothiken's Guide to Edar",
+				"url": "https://homebrewery.naturalcrit.com/share/5e-41hdfa4Qe",
+				"authors": [
+					"Drakrothiken"
+				],
 				"convertedBy": []
 			}
 		],
@@ -17,7 +19,7 @@
 	"spell": [
 		{
 			"name": "Bend Metal",
-			"source": "WorldOfEdar",
+			"source": "DrakrothikensGuidetoEdar",
 			"level": 0,
 			"school": "T",
 			"time": [
@@ -67,7 +69,7 @@
 		},
 		{
 			"name": "Blackened Bullet",
-			"source": "WorldOfEdar",
+			"source": "DrakrothikensGuidetoEdar",
 			"level": 0,
 			"school": "N",
 			"time": [
@@ -136,7 +138,7 @@
 		},
 		{
 			"name": "Blood Boil",
-			"source": "WorldOfEdar",
+			"source": "DrakrothikensGuidetoEdar",
 			"level": 0,
 			"school": "N",
 			"subschools": [
@@ -176,7 +178,8 @@
 				"constitution"
 			],
 			"miscTags": [
-				"SCL"
+				"SCL",
+				"SGT"
 			],
 			"areaTags": [
 				"ST"
@@ -200,7 +203,7 @@
 		},
 		{
 			"name": "Card Throw",
-			"source": "WorldOfEdar",
+			"source": "DrakrothikensGuidetoEdar",
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -212,7 +215,8 @@
 			"range": {
 				"type": "point",
 				"distance": {
-					"type": "self"
+					"type": "feet",
+					"amount": 60
 				}
 			},
 			"components": {
@@ -331,7 +335,8 @@
 				"R"
 			],
 			"miscTags": [
-				"SCL"
+				"SCL",
+				"SGT"
 			],
 			"areaTags": [
 				"MT"
@@ -359,7 +364,7 @@
 		},
 		{
 			"name": "Exsanguinate",
-			"source": "WorldOfEdar",
+			"source": "DrakrothikensGuidetoEdar",
 			"level": 0,
 			"school": "N",
 			"subschools": [
@@ -399,7 +404,8 @@
 				"constitution"
 			],
 			"miscTags": [
-				"SCL"
+				"SCL",
+				"SGT"
 			],
 			"areaTags": [
 				"ST"
@@ -419,7 +425,7 @@
 		},
 		{
 			"name": "Stun Shot",
-			"source": "WorldOfEdar",
+			"source": "DrakrothikensGuidetoEdar",
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -469,6 +475,228 @@
 					{
 						"name": "Artificer",
 						"source": "TCE"
+					}
+				]
+			}
+		},
+		{
+			"name": "Blackout",
+			"source": "DrakrothikensGuidetoEdar",
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": {
+				"type": "timed",
+				"duration": {
+					"type": "minute",
+					"amount": "10"
+				}
+			},
+			"entries": [
+				"Choose a source of non-magical light within range. For the duration of the spell, the chosen source of light is suppressed, causing it to generate no light."
+			],
+			"entriesHigherLevel": [
+				"When you cast this spell using a spell slot of 2nd level or higher, you can choose an additional source of light within range for each spell slot above 1st."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Bloody Spear",
+			"source": "DrakrothikensGuidetoEdar",
+			"level": 1,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You tear away some of your own blood to form a powerful spear. As part of this spell you deal {@damage 1d4 + 1} necrotic damage to yourself. Make a ranged spell attack against a creature within range. On hit, the target takes {@damage 2d10} necrotic damage.",
+				"If this damage reduces the target to 0 hit points, blood bursts from within its body, spraying nearby foes with gore and spikes of enchanted blood. Each creature within 10 feet must make a dexterity saving throw. On a failed save, a creature takes {@damage 2d6} bludgeoning damage and half as much on a successful save."
+			],
+			"miscTags": [
+				"SGT",
+				"SCL"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
+				]
+			},
+			"subschools": [
+				"Blood"
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the necrotic damage increases by {@dice 1d10} for each spell slot above 2nd."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"areaTags": [
+				"ST",
+				"C"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		},
+		{
+			"name": "Blood Reading",
+			"source": "DrakrothikensGuidetoEdar",
+			"level": 1,
+			"school": "D",
+			"subschools": [
+				"Blood"
+			],
+			"meta": {
+				"ritual": true
+			},
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "self"
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "at least 200ml of a creature's blood"
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You weave magic to pull information out of at least one ounce of blood of a creature, which the spell consumes. The blood must have come from a creature that is alive or has been dead for less than 1 hour. The spell fails without enough blood to use. Choose two of the following options below each time you cast the spell to determine what information about the creature you learn from the blood:",
+				{
+					"type": "list",
+					"items": [
+						"You learn the creature's type and its maximum hit points. You also learn all its resistances, vulnerabilities, and immunities.",
+						"You learn the direction of the creature and you learn if it is within 1 mile, 100 miles, or beyond that (which also includes other planes of existance).",
+						"You learn the identity of any poisons, diseases, curses, and blessings that are affecting the creature. Successful knowledge checks may also grant you insight into the nature and function of these conditions.",
+						"You learn if the creature's blood contains any special magic, such as the healing properties of unicorn's blood or the magical potency of a sorcerer.",
+						"If the blood is mixed with the blood of another creature, the mixture will glow bright red if the two creatures are related by blood."
+					]
+				},
+				"When you cast the spell, if the target is still alive, it feels a tingling sensation in its veins and knows your general direction. However, it doesn't necessarily know who you are or what you are doing."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
 					}
 				]
 			}
